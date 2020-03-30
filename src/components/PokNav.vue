@@ -4,6 +4,7 @@
       <li><router-link to="/">Accueil</router-link></li>
       <li><router-link to="/Pokedex">Pokédex</router-link></li>
       <li><router-link to="/Equipe">Equipe</router-link></li>
+      <li style="float:right;background-color: #4CAF50"><router-link to="/Projet">Projet</router-link></li>
     </ul>
   </div>
 </template>
@@ -43,7 +44,7 @@ li a:hover {
   background-color: #111;
 }
 
-.active {
+/* .active {
   background-color: #4CAF50;
-}
+} */
 </style>
