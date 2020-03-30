@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-  <Home/>
+    <PokNav/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import PokNav from './components/PokNav.vue'
 export default {
   name: 'App',
   components: {
-    Home
+    PokNav
   }
 }
 </script>

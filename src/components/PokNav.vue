@@ -5,7 +5,6 @@
       <li><router-link to="/Pokedex">Pokédex</router-link></li>
       <li><router-link to="/Equipe">Equipe</router-link></li>
     </ul>
-    <router-view/>
   </div>
 </template>
 
@@ -17,13 +16,28 @@ export default {
 </script>
 
 <style>
-  ul {
-    list-style-type: none;
-    background-color: #dddddd;
-    margin: 0;
-    padding: 0;
-  };
-  li router-link {
-  display: inline;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
 }
 </style>
