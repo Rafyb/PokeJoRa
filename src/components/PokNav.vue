@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-ul {
+#PokNav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -28,11 +28,11 @@ ul {
   width: 100%; */
 }
 
-li {
+#PokNav li {
   float: left;
 }
 
-li a {
+#PokNav li a {
   display: block;
   color: white;
   text-align: center;
@@ -40,7 +40,7 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+#PokNav li a:hover {
   background-color: #111;
 }
 
