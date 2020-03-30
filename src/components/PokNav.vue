@@ -1,5 +1,5 @@
 <template>
-  <div id="Header">
+  <div id="PokNav">
     <ul>
       <li><router-link to="/">Accueil</router-link></li>
       <li><router-link to="/Pokedex">Pokédex</router-link></li>
@@ -12,7 +12,7 @@
 <script>
 
 export default {
-  name: 'Header',
+  name: 'PokNav',
 }
 </script>
 

@@ -1,12 +1,13 @@
 <template>
   <div id="Home">
-    <Header/>
-    <p>ACCUEIL</p>
+    <PokNav/>
+    <img src="../assets/pokemon.png" alt="" height="10%" width="10%"/>
+    <h1>Bienvenue sur Pokejora</h1>
   </div>
 </template>
 
 <script>
-import Header from './Header.vue'
+import PokNav from './PokNav.vue'
 export default {
   name: 'Home',
 }

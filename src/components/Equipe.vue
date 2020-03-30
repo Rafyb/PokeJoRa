@@ -1,12 +1,12 @@
 <template>
   <div id="Equipe">
-      <Header/>
+      <PokNav/>
       <p>EQUIPE</p>
   </div>
 </template>
 
 <script>
-import Header from './Header.vue'
+import PokNav from './PokNav.vue'
 export default {
   name: 'Equipe',
 }

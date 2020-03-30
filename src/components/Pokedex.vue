@@ -1,12 +1,12 @@
 <template>
   <div id="Pokedex">
-      <Header/>
+      <PokNav/>
       <p>POKEDEX</p>
   </div>
 </template>
 
 <script>
-import Header from './Header.vue'
+import PokNav from './PokNav.vue'
 export default {
   name: 'Pokedex',
 }
