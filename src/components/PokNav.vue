@@ -28,7 +28,7 @@ li {
   float: left;
 }
 
-li {
+li a {
   display: block;
   color: white;
   text-align: center;
