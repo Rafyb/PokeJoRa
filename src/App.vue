@@ -2,15 +2,18 @@
   <div id="app">
     <PokNav/>
     <router-view/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import PokNav from './components/PokNav.vue'
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
-    PokNav
+    PokNav,
+    Footer
   }
 }
 </script>
