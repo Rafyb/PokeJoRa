@@ -13,9 +13,7 @@ export default new Vuex.Store({
     mutations: {
         setPokemons(state, payload) {
             if(payload) {
-                let tab = payload.slice();
-                tab.sort((a,b)=> a.id.localCompare(b.id));
-                state.pokemons = tab;
+                state.pokemons = payload;
             }
         }
     }

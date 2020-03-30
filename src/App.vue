@@ -27,6 +27,7 @@ export default {
           console.log(error);
         });
       }
+      pokemonList.sort((a,b)=> a.id.localeCompare(b.id));
       this.$store.commit('setPokemons',pokemonList);
     }
   }
