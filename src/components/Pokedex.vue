@@ -2,7 +2,7 @@
   <div id="Pokedex">
         <p>POKEDEX</p>
         <div id="plateau" v-for="pokemon in pokemons" :key="pokemon.id">
-            <router-link :to="{path:'Pokedex/:'+pokemon.id}">
+            <router-link :to="{path:'Pokedex/'+pokemon.id}">
                 <div class="card">
                     <img :src="'https://pokeres.bastionbot.org/images/pokemon/'+pokemon.data.id+'.png'" alt="Avatar" style="width:100%">
                     <div class="container">
