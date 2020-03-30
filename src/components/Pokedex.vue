@@ -1,14 +1,14 @@
 <template>
-  <div id="Home">
-    <Header/>
-    <p>ACCUEIL</p>
+  <div id="Pokedex">
+      <Header/>
+      <p>POKEDEX</p>
   </div>
 </template>
 
 <script>
 import Header from './Header.vue'
 export default {
-  name: 'Home',
+  name: 'Pokedex',
 }
 </script>
 

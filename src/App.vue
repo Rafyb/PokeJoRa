@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Header/>
+    <h1>Bienvenue sur Pokejora</h1>
   </div>
 </template>
 
 <script>
-
+import Header from './components/Header.vue'
 export default {
   name: 'App',
   components: {
