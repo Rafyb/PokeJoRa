@@ -1,17 +1,25 @@
 <template>
   <div id="app">
+    <PokNav/>
     <router-view/>
+    <Footer/>
   </div>
 </template>
 
 <script>
+
 import axios from 'axios';
+import PokNav from './components/PokNav.vue'
+import Footer from './components/Footer.vue'
+
 export default {
   name: 'App',
   created() {
     this.getAll();
   },
   components: {
+    PokNav,
+    Footer
   },
   methods: {
     getAll() {  
@@ -42,7 +50,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /*margin-top: 60px;*/
 }
 
 html,body{
