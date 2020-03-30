@@ -2,13 +2,16 @@
   <div id="Pokedex">
         <p>POKEDEX</p>
         <div id="plateau" v-for="pokemon in pokemons" :key="pokemon.id">
-            <div class="card">
-                <img src="img_avatar.png" alt="Avatar" style="width:100%">
-                <div class="container">
-                    <h4><b>{{pokemon.data.id}}</b></h4>
-                    <p>{{pokemon.data.names[6].name}}</p>
+            <router-link :to="{path:'Pokedex/'+pokemon.id}">
+                <div class="card">
+                    <!-- <img src="https://pokeres.bastionbot.org/images/pokemon/1.png" alt="Image" style="width:100%"> -->
+                    <img :src="'https://pokeres.bastionbot.org/images/pokemon/'+pokemon.data.id+'.png'" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>{{pokemon.data.id}}</b></h4>
+                        <p>{{pokemon.data.names[6].name}}</p>
+                    </div>
                 </div>
-            </div>
+            </router-link>
         </div>
   </div>
 </template>
@@ -36,6 +39,7 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 20%;
+  height: 10%;
   float:left;
 }
 .card:hover {
