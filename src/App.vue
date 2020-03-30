@@ -16,7 +16,7 @@ export default {
   methods: {
     getAll() {  
       let pokemonList = []   
-      for(let idx =0; idx < 808; idx++){ 
+      for(let idx =1; idx < 808; idx++){ 
         axios.get(`https://pokeapi.co/api/v2/pokemon-species/${idx}/`)
         .then((response) => {       
             pokemonList.push({
