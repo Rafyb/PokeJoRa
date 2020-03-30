@@ -1,12 +1,16 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import App from './App.vue'
 import Home from './components/Home.vue'
 import Pokedex from './components/Pokedex.vue'
 import Equipe from './components/Equipe.vue'
+import VueRouter from 'vue-router'
 
-Vue.use(Router)
+Vue.config.productionTip = false
 
-export default new Router({
+Vue.use(VueRouter)
+
+
+const router = new VueRouter({
   routes:[{
     path:'/',
     component: Home,

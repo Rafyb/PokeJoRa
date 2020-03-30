@@ -10,6 +10,9 @@
 import PokNav from './PokNav.vue'
 export default {
   name: 'Home',
+  components: {
+    PokNav
+  }
 }
 </script>
 

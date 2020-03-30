@@ -9,6 +9,9 @@
 import PokNav from './PokNav.vue'
 export default {
   name: 'Pokedex',
+  components: {
+    PokNav
+  }
 }
 </script>
 

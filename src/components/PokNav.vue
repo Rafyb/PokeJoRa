@@ -17,5 +17,13 @@ export default {
 </script>
 
 <style>
-
+  ul {
+    list-style-type: none;
+    background-color: #dddddd;
+    margin: 0;
+    padding: 0;
+  };
+  li router-link {
+  display: inline;
+}
 </style>
