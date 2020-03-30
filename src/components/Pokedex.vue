@@ -1,11 +1,15 @@
 <template>
   <div id="Pokedex">
-      <p>POKEDEX</p>
-      <div>
-          <ul v-for="pokemon in pokemons" :key="pokemon.id">
-            <li>{{pokemon.data.names[6].name}} #{{pokemon.data.id}}</li>
-          </ul>
-      </div>
+        <p>POKEDEX</p>
+        <div id="plateau" v-for="pokemon in pokemons" :key="pokemon.id">
+            <div class="card">
+                <img src="img_avatar.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>{{pokemon.data.id}}</b></h4>
+                    <p>{{pokemon.data.names[6].name}}</p>
+                </div>
+            </div>
+        </div>
   </div>
 </template>
 
@@ -24,12 +28,20 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+#plateau {
+  margin: auto;
+  width: 80%;
 }
-li {
-  text-decoration: none;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  float:left;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+  padding: 2px 16px;
 }
 </style>
