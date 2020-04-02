@@ -1,7 +1,7 @@
 <template>
   <div id="Pokemon">
-      <p>Pokemon n° {{param}}</p>
-      <p>{{pokemons[0].data.names[6].name}}</p>
+      <p>Pokemon n° {{pokemon.id}}</p>
+      <p>{{pokemon.data.names[6].name}}</p>
   </div>
 </template>
 
@@ -11,14 +11,10 @@ export default {
   components: {
   },
   computed: {
-        pokemons() {
-            console.log(this.$store.getters.getPokemons);
-            return this.$store.getters.getPokemons;
-        },
-        param() {
-            return this.$route.params.id;
-        }
+    pokemon() {
+        return this.$store.getters.getPokemons[this.$route.params.id-1];
     }
+  }
 }
 </script>
 
