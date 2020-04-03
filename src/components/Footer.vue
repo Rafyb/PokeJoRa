@@ -1,6 +1,7 @@
 <template>
   <div id="Footer">    
     <p>&copy; Copyright 2020, POKEJORA, Johann - Raphaël</p>
+    <p>API : <a href="https://pokeapi.co/">PokeAPI</a> / Images : <a href="https://pokeres.bastionbot.org/images/pokemon/">Pokeres</a></p>
   </div>
 </template>
 
@@ -22,7 +23,12 @@ export default {
   padding: 0;
   background-color: #333;
   color: white;
-  font-size: 10px;
+  font-size: 0.8em;
+}
+
+a{
+  color: white;
+  text-decoration: none;
 }
 
 </style>

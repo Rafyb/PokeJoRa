@@ -1,10 +1,11 @@
 <template>
   <div id="PokNav">
     <ul>
+      <li><b>Pokejora</b></li>
       <li><router-link to="/">Accueil</router-link></li>
       <li><router-link to="/Pokedex">Pokédex</router-link></li>
-      <li><router-link to="/Equipe">Equipe</router-link></li>
-      <li style="float:right;background-color: #4CAF50"><router-link to="/Projet">Projet</router-link></li>
+      <li><router-link to="/Equipe">Mon Equipe</router-link></li>
+      <li style="float:right;background-color: #c62828"><router-link to="/Projet">Projet</router-link></li>
     </ul>
   </div>
 </template>
@@ -17,22 +18,24 @@ export default {
 </script>
 
 <style>
-ul {
+#PokNav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  /* position: fixed;
+  /*
+  position: fixed;
   top: 0;
-  width: 100%; */
+  width: 100%; 
+  */
 }
 
-li {
+#PokNav li {
   float: left;
 }
 
-li a {
+#PokNav li a {
   display: block;
   color: white;
   text-align: center;
@@ -40,8 +43,16 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+#PokNav li a:hover {
   background-color: #111;
+}
+
+b{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: #c62828;
 }
 
 /* .active {

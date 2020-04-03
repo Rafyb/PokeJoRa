@@ -23,19 +23,19 @@ export default {
   },
   methods: {
     getAll() {  
-      let pokemonList = []   
-      for(let idx =1; idx < 808; idx++){ 
+      let nb_pokemon = 807;
+      let pokemonList = [];   
+      for(let idx =1; idx <= nb_pokemon; idx++){ 
         axios.get(`https://pokeapi.co/api/v2/pokemon-species/${idx}/`)
-        .then((response) => {       
-            pokemonList.push({
-              id:idx,
+        .then(response=>{
+          pokemonList[response.data.id-1]={
+              id:response.data.id,
               data:response.data
-            });
-        }).catch(error => {
-          console.log(error);
-        });
+          };
+        })
+        .catch(error => console.log(error) )
       }
-      pokemonList.sort((a,b)=> a.id.localeCompare(b.id));
+      console.log(pokemonList)
       this.$store.commit('setPokemons',pokemonList);
     }
   }
@@ -58,5 +58,7 @@ html,body{
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: rgb(255, 255, 255);
 }
+
 </style>
