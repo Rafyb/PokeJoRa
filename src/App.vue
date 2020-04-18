@@ -9,13 +9,15 @@
 <script>
 
 import axios from 'axios';
-import PokNav from './components/PokNav.vue'
-import Footer from './components/Footer.vue'
+import TypesData from './assets/types.json';
+import PokNav from './components/PokNav.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   created() {
     this.getAll();
+    this.generateTypes();
   },
   components: {
     PokNav,
@@ -33,10 +35,23 @@ export default {
               data:response.data
           };
         })
-        .catch(error => console.log(error) )
+        .catch(error =>{
+            console.log(error);
+        })
       }
-      console.log(pokemonList)
+      for(let idx =1; idx <= nb_pokemon; idx++){ 
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${idx}/`)
+          .then(response=>{
+            pokemonList[response.data.id-1].details = response.data;
+          })
+          .catch(error =>{
+            console.log(error);
+          })
+      }
       this.$store.commit('setPokemons',pokemonList);
+    },
+    generateTypes(){
+      this.$store.commit('setTypes',TypesData);
     }
   }
 
@@ -50,6 +65,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
+  width: 100%;
   /*margin-top: 60px;*/
 }
 
@@ -61,4 +78,13 @@ html,body{
   background-color: rgb(255, 255, 255);
 }
 
+.block{
+  border-radius: 0.2em;
+  border: 1px solid gainsboro;
+  background-color:#f8f8f8 ;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  margin : 5%;
+  padding:5%;
+}
 </style>
