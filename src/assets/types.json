@@ -3,97 +3,97 @@
         {
             "name":"default",
             "color":"#cccccc",
-            "sprite":"/assets/inconnu.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/inconnu.png"
         },
         {
             "name":"grass",
             "color":"#5fab36",
-            "sprite":"/assets/plante.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/plante.png"
         },
         {
             "name":"poison",
-            "color":"#cccccc",
-            "sprite":"/assets/poison.png"
+            "color":"#a461c1",
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/poison.png"
         },
         {
             "name":"normal",
-            "color":"#cccccc",
-            "sprite":"/assets/normal.png"
+            "color":"#8a929b    ",
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/normal.png"
         },
         {
             "name":"fighting",
             "color":"#cccccc",
-            "sprite":"/assets/combat.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/combat.png"
         },
         {
             "name":"flying",
             "color":"#dae8ee",
-            "sprite":"/assets/vol.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/vol.png"
         },
         {
             "name":"ground",
             "color":"#cccccc",
-            "sprite":"/assets/sol.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/sol.png"
         },
         {
             "name":"rock",
-            "color":"#cccccc",
-            "sprite":"/assets/roche.png"
+            "color":"#beb286",
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/roche.png"
         },
         {
             "name":"bug",
             "color":"#72aa63",
-            "sprite":"/assets/insecte.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/insecte.png"
         },
         {
             "name":"ghost",
             "color":"#cccccc",
-            "sprite":"/assets/spectre.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/spectre.png"
         },
         {
             "name":"steel",
-            "color":"#cccccc",
-            "sprite":"/assets/acier.png"
+            "color":"#b8b8d0",
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/acier.png"
         },
         {
             "name":"fire",
             "color":"#f5a357",
-            "sprite":"/assets/feu.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/feu.png"
         },
         {
             "name":"water",
             "color":"#6584af",
-            "sprite":"/assets/eau.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/eau.png"
         },
         {
             "name":"electric",
-            "color":"#cccccc",
-            "sprite":"/assets/electrik.png"
+            "color":"#fae078",
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/electrik.png"
         },
         {
             "name":"psychic",
-            "color":"#cccccc",
-            "sprite":"/assets/psy.png"
+            "color":"#ee99ac",
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/psy.png"
         },
         {
             "name":"ice",
             "color":"#cccccc",
-            "sprite":"/assets/glace.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/glace.png"
         },
         {
             "name":"dragon",
             "color":"#cccccc",
-            "sprite":"/assets/dragon.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/dragon.png"
         },
         {
             "name":"dark",
-            "color":"#cccccc",
-            "sprite":"/assets/tenebre.png"
+            "color":"#4f5870",
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/tenebre.png"
         },
         {
             "name":"fairy",
             "color":"#cccccc",
-            "sprite":"/assets/fee.png"
+            "sprite":"https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/fee.png"
         }
     ]
 }

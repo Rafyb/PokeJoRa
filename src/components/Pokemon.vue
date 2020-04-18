@@ -2,7 +2,9 @@
   <div id="Pokemon" v-bind:style="{backgroundColor:color}">
       <Colonne :pokemon="pokemon"/>
       <div class="block">
-        <h3>Localisation</h3>
+        <h3>Block d'info 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris turpis, tempor et venenatis vitae, placerat sit amet mi. Fusce tincidunt, turpis sodales sagittis vestibulum, justo lacus pretium mi, vitae scelerisque lorem purus vel ante. Vivamus a neque eget felis cursus laoreet. Suspendisse et feugiat quam. Sed luctus tempor accumsan. Ut dapibus metus felis, eget porta tortor posuere non. Donec quis libero vitae elit rhoncus pretium. Vestibulum pharetra metus nec consectetur imperdiet. Aenean tristique risus at suscipit pulvinar.</p>
+        <p>Pellentesque luctus sed elit et facilisis. Curabitur molestie aliquam metus at semper. Phasellus vel consequat lectus. Suspendisse eget arcu sollicitudin, congue quam sit amet, laoreet dui. Aliquam ut enim at nulla blandit elementum. Donec aliquam lacus et leo scelerisque tempus a id dolor. Fusce ornare interdum metus.</p>
       </div>
       <div class="block">
         <h3>Statistique</h3>
@@ -14,6 +16,7 @@
 </template>
 
 <script>
+
 import Colonne from './Colonne.vue'
 import Statistique from './Statistique.vue'
 
