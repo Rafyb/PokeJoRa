@@ -9,13 +9,15 @@
 <script>
 
 import axios from 'axios';
-import PokNav from './components/PokNav.vue'
-import Footer from './components/Footer.vue'
+import TypesData from './assets/types.json';
+import PokNav from './components/PokNav.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   created() {
     this.getAll();
+    this.generateTypes();
   },
   components: {
     PokNav,
@@ -47,6 +49,9 @@ export default {
           })
       }
       this.$store.commit('setPokemons',pokemonList);
+    },
+    generateTypes(){
+      this.$store.commit('setTypes',TypesData);
     }
   }
 
@@ -73,4 +78,13 @@ html,body{
   background-color: rgb(255, 255, 255);
 }
 
+.block{
+  border-radius: 0.2em;
+  border: 1px solid gainsboro;
+  background-color:#f8f8f8 ;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  margin : 5%;
+  padding:5%;
+}
 </style>

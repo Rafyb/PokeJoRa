@@ -7,7 +7,8 @@
             <img src="https://media.giphy.com/media/RaGnv1Dx2aseY/source.gif">
             <h1> Chargement du Pokedex </h1>
           </div>
-          <div class="card" v-else v-for="pokemon in pokemons" :key="pokemon.id">
+
+            <div v-else class="card" v-for="pokemon in pokemons" :key="pokemon.id">
               <router-link :to="{path:'Pokedex/'+pokemon.id}">
                       <img :src="'https://pokeres.bastionbot.org/images/pokemon/'+pokemon.data.id+'.png'" alt="Avatar" style="width:100%">
                       <div class="container">
@@ -15,8 +16,9 @@
                           <p>{{pokemon.data.names[6].name}}</p>
                       </div>
               </router-link>
+            </div>
+
           </div>
-        </div>
   </div>
 </template>
 
@@ -41,7 +43,7 @@ export default {
   }, 
   methods: {
     refresh(){
-      if(this.$store.getters.getPokemons.length < 806){
+      if(this.$store.getters.getPokemons == undefined || this.$store.getters.getPokemons.length < 806){
         setTimeout(this.refresh,1500);
       } else {
         this.loading = false;
