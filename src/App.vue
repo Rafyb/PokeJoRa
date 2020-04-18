@@ -17,7 +17,7 @@ export default {
   name: 'App',
   created() {
     this.getAll();
-    this.generateTypes();
+    this.generateTypesAndTeam();
   },
   components: {
     PokNav,
@@ -50,8 +50,10 @@ export default {
       }
       this.$store.commit('setPokemons',pokemonList);
     },
-    generateTypes(){
+    generateTypesAndTeam(){
       this.$store.commit('setTypes',TypesData);
+      let team = [0,0,0,0,0,0];
+      this.$store.commit('setTeam',team);
     }
   }
 

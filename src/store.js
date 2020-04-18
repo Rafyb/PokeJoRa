@@ -6,11 +6,13 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         pokemons: [],
-        types: []
+        types: [],
+        equipe: []
     },
     getters: {
         getPokemons: state => state.pokemons,
-        getTypeData: state => state.types
+        getTypeData: state => state.types,
+        getTeam: state => state.equipe
         
     },
     mutations: {
@@ -22,6 +24,11 @@ export default new Vuex.Store({
         setTypes(state, payload) {
             if(payload) {
                 state.types = payload;
+            }
+        },
+        setTeam(state, payload) {
+            if(payload) {
+                state.equipe = payload;
             }
         }
     }

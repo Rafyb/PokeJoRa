@@ -50,7 +50,14 @@ export default {
         window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
       },
       addToTeam(){
-
+        let team = this.$store.getters.getTeam;
+        let idxLibre = team.indexOf(0);
+        if(idxLibre == -1) {
+          alert("Votre équipe est pleine");
+        } else {
+          team[idxLibre] = this.pokemon.id;
+          alert("Le pokremon N°"+this.pokemon.id+" a bien été ajouté");
+        }
       }
     }
 }
