@@ -33,9 +33,19 @@ export default {
               data:response.data
           };
         })
-        .catch(error => console.log(error) )
+        .catch(error =>{
+            console.log(error);
+        })
       }
-      console.log(pokemonList)
+      for(let idx =1; idx <= nb_pokemon; idx++){ 
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${idx}/`)
+          .then(response=>{
+            pokemonList[response.data.id-1].details = response.data;
+          })
+          .catch(error =>{
+            console.log(error);
+          })
+      }
       this.$store.commit('setPokemons',pokemonList);
     }
   }
@@ -50,6 +60,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
+  width: 100%;
   /*margin-top: 60px;*/
 }
 
