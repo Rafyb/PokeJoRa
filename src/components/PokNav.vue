@@ -24,11 +24,6 @@ export default {
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  /*
-  position: fixed;
-  top: 0;
-  width: 100%; 
-  */
 }
 
 #PokNav li {
@@ -54,8 +49,4 @@ b{
   padding: 14px 16px;
   background-color: #c62828;
 }
-
-/* .active {
-  background-color: #4CAF50;
-} */
 </style>

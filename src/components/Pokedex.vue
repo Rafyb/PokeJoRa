@@ -3,22 +3,22 @@
         <Filtres @my-event="change_filters"/>
         <div class="contenu">
           <p>POKEDEX</p>
+          <!-- Gif de chargement -->
           <div v-if="pokemons == undefined">
             <img src="https://media.giphy.com/media/RaGnv1Dx2aseY/source.gif">
             <h1> Chargement du Pokedex </h1>
           </div>
-
-            <div v-else class="card" v-for="pokemon in filteredPokemons" :key="pokemon.id">
-              <router-link :to="{path:'Pokedex/'+pokemon.id}">
-                      <img :src="'https://pokeres.bastionbot.org/images/pokemon/'+pokemon.data.id+'.png'" alt="Avatar" style="width:100%">
-                      <div class="container">
-                          <h4><b>N°{{pokemon.data.id}}</b></h4>
-                          <p>{{pokemon.data.names[6].name}}</p>
-                      </div>
-              </router-link>
-            </div>
-
+          <!-- Liste des pokemons -->
+          <div v-else class="card" v-for="pokemon in filteredPokemons" :key="pokemon.id">
+            <router-link :to="{path:'Pokedex/'+pokemon.id}">
+              <img :src="'https://pokeres.bastionbot.org/images/pokemon/'+pokemon.data.id+'.png'" alt="Avatar" style="width:100%">
+                <div class="container">
+                  <h4><b>N°{{pokemon.data.id}}</b></h4>
+                  <p>{{pokemon.data.names[6].name}}</p>
+                </div>
+            </router-link>
           </div>
+        </div>
   </div>
 </template>
 
@@ -67,6 +67,7 @@ export default {
   }, 
   methods: {
     refresh(){
+      // Permet de fermet le Gif une fois le contenu totalement récupéré
       if(this.$store.getters.getPokemons == undefined || this.$store.getters.getPokemons.length < 806){
         setTimeout(this.refresh,1500);
       } else {

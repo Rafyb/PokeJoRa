@@ -2,10 +2,6 @@
   <div id="Pokemon" v-bind:style="{backgroundColor:color}">
       <Colonne :pokemon="pokemon"/>
       <div id="content">
-        <!-- <div class="block">
-          <h3>Autres informations</h3>
-          
-        </div> -->
         <div class="block">
           <h3>Statistique</h3>
           <Statistique :pokemon="pokemon"/>
