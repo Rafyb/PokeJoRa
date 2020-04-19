@@ -9,10 +9,6 @@
           <p>Taille : {{pokemon.details.height/10}} m</p>
           <p>Poids : {{pokemon.details.weight/10}} kg</p>
         </div>
-        <div class="block">
-            <h3>Description</h3>
-            <p>{{pokemon.data.flavor_text_entries[5].flavor_text}}</p>
-        </div>
     </div>
 </template>
 
