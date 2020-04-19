@@ -42,13 +42,13 @@ export default {
   padding-bottom:0.1% ;
   border-radius:15px;
   text-align: center;
+  height:80%;
 }
 
 #equipe > .block{
   margin: 2%;
   padding: 1%;
   width: 30%;
-  height:30%;
   display: inline-block;
 }
 

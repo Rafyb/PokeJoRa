@@ -74,7 +74,6 @@ export default {
       }
     },
     change_filters(recherche, region, type, taille_min, taille_max){
-      console.log("change"+recherche);
       this.recherche=recherche;
       this.region=region;
       this.type=type;

@@ -116,7 +116,7 @@ export default {
       console.log(this.type);
       console.log(this.taille_min);
       console.log(this.taille_max);
-      this.$emit("my-event", this.recherche, this.region, this.type, this.taille_min, this.taille_max);
+      this.$emit("my-event", this.recherche, this.region, this.type, parseInt(this.taille_min), parseInt(this.taille_max));
     },
     clear_filters(){
       this.recherche='';
