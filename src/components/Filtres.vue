@@ -73,6 +73,7 @@
       <input type="radio" id="insecte" value="bug" v-model="type" v-on:change="envoi_filtre">
       <label for="insecte"><img src="../assets/insecte.png" alt="Insecte" height="20%" width="20%"></label>
     </div>
+    <br>
     <div id=Tailles>
       <span> Taille min. </span>
       <input type="number" id="taille_min" v-model="taille_min" v-on:input="envoi_filtre">

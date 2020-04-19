@@ -50,7 +50,6 @@ export default {
       if(this.region != ''){
         filteredPoke = filteredPoke.filter(x => x.data.generation.name == this.region);
       }
-
       if(this.type != ''){
         filteredPoke = filteredPoke.filter(x => this.types_pokemon(x.details.types,this.type));
       }
