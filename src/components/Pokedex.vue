@@ -54,13 +54,13 @@ export default {
         filteredPoke = filteredPoke.filter(x => this.types_pokemon(x.details.types,this.type));
       }
       if(this.taille_min != '' && this.taille_max != ''){
-        filteredPoke = filteredPoke.filter(x => (x.data.height >= this.taille_min && x.data.height <= this.taille_max));
+        filteredPoke = filteredPoke.filter(x => (x.details.height >= this.taille_min && x.details.height <= this.taille_max));
       }
       else if(this.taille_min !='' && this.taille_max == ''){
-        filteredPoke = filteredPoke.filter(x => (x.data.height >= this.taille_min));
+        filteredPoke = filteredPoke.filter(x => (x.details.height >= this.taille_min));
       }
       else if(this.taille_min == '' && this.taille_max != ''){
-        filteredPoke = filteredPoke.filter(x => (x.data.height <= this.taille_max));
+        filteredPoke = filteredPoke.filter(x => (x.details.height <= this.taille_max));
       }
       return filteredPoke;
     }
