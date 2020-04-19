@@ -69,7 +69,7 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin:2%;
   margin-bottom: 10%;
-  padding-bottom:1% ;
+  padding-bottom:0.1% ;
   border-radius:15px;
   text-align: left;
 }

@@ -48,9 +48,9 @@ export default {
       if(this.region != ''){
         filteredPoke = filteredPoke.filter(x => x.data.generation.name == this.region);
       }
-      // if(this.type != ''){
-      //   filteredPoke = filteredPoke.filter(x => this.types_pokemon(x.details.types));
-      // }
+      if(this.type != ''){
+        filteredPoke = filteredPoke.filter(x => this.types_pokemon(x.details.types,this.type));
+      }
       return filteredPoke;
     }
   }, 
@@ -78,16 +78,16 @@ export default {
     //         }
     //     });
     // }
-    types_pokemon(types){
+    types_pokemon(types,type){
+      let ret = false;
       console.log(types);
-      console.log(this.type);
-      types.forEach(function(type_loop){
-          console.log(type_loop);
-          if (type_loop.type.name == this.type) {
-            console.log("true");
-            return true;
+      console.log(type);
+      types.forEach(function(loop_type){
+          if (loop_type.type.name == type) {
+            ret = true;
           }
-      })  
+      })
+      return ret;  
     }
   }, 
   // filters:{

@@ -1,6 +1,6 @@
 <template>
   <div id="Footer">    
-    <p>&copy; Copyright 2020, POKEJORA, Johann - Raphaël     API : <a href="https://pokeapi.co/">PokeAPI</a> / Images : <a href="https://pokeres.bastionbot.org/images/pokemon/">Pokeres</a></p>
+    <p>&copy; Copyright 2020, POKEJORA, Johann - Raphaël  |   API : <a href="https://pokeapi.co/">PokeAPI</a> / Images : <a href="https://pokeres.bastionbot.org/images/pokemon/">Pokeres</a></p>
   </div>
 </template>
 
