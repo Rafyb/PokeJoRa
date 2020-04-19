@@ -7,7 +7,7 @@ Il a été réalisé par :
 
 Le thème : Créer un Pokédex en utilisant l’API Pokémon suivante : https://pokeapi.co/ 
 
-Version deployé : https://pokejora.firebaseapp.com/
+Version deployée : https://pokejora.firebaseapp.com/
 
 ## Le lancer depuis chez vous
 ```
