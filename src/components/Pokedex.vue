@@ -84,8 +84,6 @@ export default {
     },
     types_pokemon(types,type){
       let ret = false;
-      console.log(types);
-      console.log(type);
       types.forEach(function(loop_type){
           if (loop_type.type.name == type) {
             ret = true;
