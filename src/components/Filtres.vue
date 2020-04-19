@@ -97,8 +97,8 @@ export default {
       this.recherche='';
       this.region='';
       this.type='';
-      this.taille_min='';
-      this.taille_max='';
+      this.taille_min='0';
+      this.taille_max='0';
       this.envoi_filtre();
     }
   },
