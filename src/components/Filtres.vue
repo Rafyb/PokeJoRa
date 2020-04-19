@@ -73,6 +73,12 @@
       <input type="radio" id="insecte" value="bug" v-model="type" v-on:change="envoi_filtre">
       <label for="insecte"><img src="../assets/insecte.png" alt="Insecte" height="20%" width="20%"></label>
     </div>
+    <div id=Tailles>
+      <span> Taille min. </span>
+      <input type="number" id="taille_min" v-model="taille_min" v-on:input="envoi_filtre">
+      <span> Taille max. </span>
+      <input type="number" id="taille_max" v-model="taille_max" v-on:input="envoi_filtre">
+    </div>
     <br>
     <!-- <div id="Evolutions">
       <input type="radio" id="premiere" value="Premiere" v-model="evolution">
@@ -96,6 +102,8 @@ export default {
       recherche:'',
       region:'',
       type:'',
+      taille_min:'',
+      taille_max:'',
       // evolution:''
     }
   },
@@ -105,12 +113,16 @@ export default {
       console.log(this.recherche);
       console.log(this.region);
       console.log(this.type);
-      this.$emit("my-event", this.recherche, this.region, this.type);
+      console.log(this.taille_min);
+      console.log(this.taille_max);
+      this.$emit("my-event", this.recherche, this.region, this.type, this.taille_min, this.taille_max);
     },
     clear_filters(){
       this.recherche='';
       this.region='';
       this.type='';
+      this.taille_min='';
+      this.taille_max='';
       this.envoi_filtre();
     }
   },
@@ -129,7 +141,7 @@ export default {
   margin-left:10%;
 }
 #searchbar{
-  /* border-radius: 10px; */
+  border-radius: 30%;
   margin-right: 1%;
 }
 #Recherche{
@@ -144,5 +156,11 @@ export default {
   width:80%;
   text-align: center;
   margin-left:10%;
+}
+#Tailles span{
+  font-size:50%;
+}
+#Tailles input{
+  width:20%;
 }
 </style>

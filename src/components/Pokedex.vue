@@ -35,6 +35,8 @@ export default {
       recherche:'',
       region:'',
       type:'',
+      taille_min:'', 
+      taille_max:'',
     };
   },
   computed: {
@@ -51,6 +53,15 @@ export default {
       // if(this.type != ''){
       //   filteredPoke = filteredPoke.filter(x => this.types_pokemon(x.details.types));
       // }
+      if(this.taille_min != '' && this.taille_max != ''){
+        filteredPoke = filteredPoke.filter(x => (x.data.height >= this.taille_min && x.data.height <= this.taille_max));
+      }
+      else if(this.taille_min !='' && this.taille_max == ''){
+        filteredPoke = filteredPoke.filter(x => (x.data.height >= this.taille_min));
+      }
+      else if(this.taille_min == '' && this.taille_max != ''){
+        filteredPoke = filteredPoke.filter(x => (x.data.height <= this.taille_max));
+      }
       return filteredPoke;
     }
   }, 
@@ -62,11 +73,13 @@ export default {
         this.loading = false;
       }
     },
-    change_filters(recherche, region, type){
+    change_filters(recherche, region, type, taille_min, taille_max){
       console.log("change"+recherche);
       this.recherche=recherche;
       this.region=region;
       this.type=type;
+      this.taille_min=taille_min;
+      this.taille_max=taille_max;
     },
     // types_pokemon(types){
     //     console.log(types);
