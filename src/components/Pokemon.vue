@@ -37,8 +37,6 @@ export default {
         color(){
           let typeName =  this.pokemon.details.types[this.pokemon.details.types.length-1].type.name;
           let types = this.$store.getters.getTypeData.types;
-          console.log(typeName)
-          console.log(types)
           let color = types[0].color;
           let type = types.find( type => type.name == typeName); 
           if(type != undefined) color = type.color;
@@ -67,9 +65,11 @@ export default {
 #Pokemon{
   padding-top: 0.1px;
   width:96%;
-  height: 80%;
+  min-height: 70%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin:2%;
+  margin-bottom: 10%;
+  padding-bottom:0.1% ;
   border-radius:15px;
   text-align: left;
 }

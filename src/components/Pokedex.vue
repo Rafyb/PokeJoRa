@@ -50,9 +50,10 @@ export default {
       if(this.region != ''){
         filteredPoke = filteredPoke.filter(x => x.data.generation.name == this.region);
       }
-      // if(this.type != ''){
-      //   filteredPoke = filteredPoke.filter(x => this.types_pokemon(x.details.types));
-      // }
+
+      if(this.type != ''){
+        filteredPoke = filteredPoke.filter(x => this.types_pokemon(x.details.types,this.type));
+      }
       if(this.taille_min != '' && this.taille_max != ''){
         filteredPoke = filteredPoke.filter(x => (x.data.height >= this.taille_min && x.data.height <= this.taille_max));
       }
@@ -81,31 +82,18 @@ export default {
       this.taille_min=taille_min;
       this.taille_max=taille_max;
     },
-    // types_pokemon(types){
-    //     console.log(types);
-    //     console.log(this.type);
-    //     this.types.forEach(element => {
-    //         if (element.type.name == this.type) {
-    //           console.log("true");
-    //           return true;
-    //         }
-    //     });
-    // }
-    types_pokemon(types){
+    types_pokemon(types,type){
+      let ret = false;
       console.log(types);
-      console.log(this.type);
-      types.forEach(function(type_loop){
-          console.log(type_loop);
-          if (type_loop.type.name == this.type) {
-            console.log("true");
-            return true;
+      console.log(type);
+      types.forEach(function(loop_type){
+          if (loop_type.type.name == type) {
+            ret = true;
           }
-      })  
+      })
+      return ret;  
     }
-  }, 
-  // filters:{
-  //   types_pokemon
-  // }
+  }
 }
 </script>
 
