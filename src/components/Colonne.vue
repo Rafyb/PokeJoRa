@@ -4,8 +4,10 @@
             <h2>{{pokemon.data.names[6].name}} #{{pokemon.id}}</h2>
         </div>
         <img :src="'https://pokeres.bastionbot.org/images/pokemon/'+pokemon.data.id+'.png'" alt="Avatar" id="Avatar">
-        <div class="types" v-html="typesToHtml(pokemon.details.types)">
-            
+        <div class="types" v-html="typesToHtml(pokemon.details.types)"></div>
+        <div class="block">
+          <p>Taille : </p>
+          <p>Poids : </p>
         </div>
         <div class="block">
             <h3>Description</h3>
@@ -41,7 +43,9 @@ export default {
 
 <style scoped>
 #colonne{
-  float: left;
+  /*float: left;*/
+  vertical-align: top;
+  display: inline-block;
   width :20%;
   background-color: #f0f0f0;
   height: 100%;

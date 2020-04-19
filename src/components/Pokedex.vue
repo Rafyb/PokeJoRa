@@ -68,20 +68,8 @@ export default {
       this.region=region;
       this.type=type;
     },
-    // types_pokemon(types){
-    //     console.log(types);
-    //     console.log(this.type);
-    //     this.types.forEach(element => {
-    //         if (element.type.name == this.type) {
-    //           console.log("true");
-    //           return true;
-    //         }
-    //     });
-    // }
     types_pokemon(types,type){
       let ret = false;
-      console.log(types);
-      console.log(type);
       types.forEach(function(loop_type){
           if (loop_type.type.name == type) {
             ret = true;
