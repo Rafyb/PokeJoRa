@@ -2,23 +2,10 @@
   <div id="Equipe">
       <p>EQUIPE</p>
         <div id="equipe">
-          <div class="block">
-            <h3>1</h3>
-          </div>
-          <div class="block">
-            <h3>2</h3>
-          </div>
-          <div class="block">
-            <h3>3</h3>
-          </div>
-          <div class="block">
-            <h3>4</h3>
-          </div>
-          <div class="block">
-            <h3>5</h3>
-          </div>
-          <div class="block">
-            <h3>6</h3>
+          <div class="block" v-for="id in teamId" :key="id">
+            <h3  v-if="id!=0">N°{{id + 1}}</h3>
+            <img :src="`https://pokestrat.io/images/gif-animes/${id}.gif`" alt="animated"/>
+            <button v-if="id!=0" v-on:click="deleteTeam(id)">Retirer de l'équipe</button>
           </div>
         </div>
   </div>
@@ -27,7 +14,24 @@
 <script>
 export default {
   name: 'Equipe',
-  components: {
+  data:function(){
+    return{
+      teamChange : 0
+    }
+  },
+  computed:{
+    teamId(){
+      if(this.teamChange) console.log('refresh');
+      return this.$store.getters.getTeam;
+    }
+  },
+  methods:{
+    deleteTeam(id){
+      this.teamChange++;
+      let team = this.$store.getters.getTeam;
+      team[team.indexOf(id)] = 0;
+      this.$store.commit('setTeam',team);
+    }
   }
 }
 </script>
@@ -45,11 +49,33 @@ export default {
   height:80%;
 }
 
+img{
+  height:80px;
+}
+
 #equipe > .block{
   margin: 2%;
   padding: 1%;
-  width: 30%;
+  width: 180px;
+  height: 180px;
   display: inline-block;
+  vertical-align: top;
+  background:  url('https://raw.githubusercontent.com/Rafyb/Pokejora/master/src/assets/pokeball_fond.png') center 0 no-repeat;
+}
+
+button{
+  width: 180px;
+  border: none;
+  text-decoration: none;
+  font-size: 19px;
+  padding: 10px;
+  color: white;
+  background-color: #c62828
+}
+
+button:hover{
+  background-color: #ffffff;
+  color: #333333;
 }
 
 #equipe{

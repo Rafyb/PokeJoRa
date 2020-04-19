@@ -39,7 +39,6 @@ export default {
 
 <style scoped>
 #colonne{
-  /*float: left;*/
   vertical-align: top;
   display: inline-block;
   width :20%;

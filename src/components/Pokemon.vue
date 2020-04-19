@@ -2,17 +2,13 @@
   <div id="Pokemon" v-bind:style="{backgroundColor:color}">
       <Colonne :pokemon="pokemon"/>
       <div id="content">
-        <!-- <div class="block">
-          <h3>Autres informations</h3>
-          
-        </div> -->
         <div class="block">
           <h3>Statistique</h3>
           <Statistique :pokemon="pokemon"/>
         </div>
         <div class="block">
             <h3>Description</h3>
-            <p>{{pokemon.data.flavor_text_entries[5].flavor_text}}</p>
+            <p>{{description}}</p>
         </div>
       </div>
       <button id="btn1" v-on:click="goBack">Retour</button>
@@ -46,6 +42,11 @@ export default {
           let type = types.find( type => type.name == typeName); 
           if(type != undefined) color = type.color;
           return color;
+        },
+        description(){
+          let allDesc = this.pokemon.data.flavor_text_entries;
+          let frenchDesc = allDesc.find(desc=>desc.language.name=="fr");
+          return frenchDesc.flavor_text;
         }
     },
     methods: {
