@@ -1,6 +1,6 @@
 <template>
   <div id="Pokedex">
-        <Filtres/>
+        <Filtres @my-event="change_filters"/>
         <div class="contenu">
           <p>POKEDEX</p>
           <div v-if="pokemons == undefined">
@@ -8,7 +8,7 @@
             <h1> Chargement du Pokedex </h1>
           </div>
 
-            <div v-else class="card" v-for="pokemon in pokemons" :key="pokemon.id">
+            <div v-else class="card" v-for="pokemon in filteredPokemons" :key="pokemon.id">
               <router-link :to="{path:'Pokedex/'+pokemon.id}">
                       <img :src="'https://pokeres.bastionbot.org/images/pokemon/'+pokemon.data.id+'.png'" alt="Avatar" style="width:100%">
                       <div class="container">
@@ -31,7 +31,10 @@ export default {
   },
   data:function(){
     return {
-      loading:true
+      loading:true,
+      recherche:'',
+      region:'',
+      type:'',
     };
   },
   computed: {
@@ -40,6 +43,16 @@ export default {
       if(this.loading == true) return undefined;
       return this.$store.getters.getPokemons;
     },
+    filteredPokemons(){
+      let filteredPoke = this.pokemons.filter(x => x.data.names[6].name.includes(this.recherche));
+      if(this.region != ''){
+        filteredPoke = filteredPoke.filter(x => x.data.generation.name == this.region);
+      }
+      // if(this.type != ''){
+      //   filteredPoke = filteredPoke.filter(x => this.types_pokemon(x.details.types));
+      // }
+      return filteredPoke;
+    }
   }, 
   methods: {
     refresh(){
@@ -48,8 +61,38 @@ export default {
       } else {
         this.loading = false;
       }
+    },
+    change_filters(recherche, region, type){
+      console.log("change"+recherche);
+      this.recherche=recherche;
+      this.region=region;
+      this.type=type;
+    },
+    // types_pokemon(types){
+    //     console.log(types);
+    //     console.log(this.type);
+    //     this.types.forEach(element => {
+    //         if (element.type.name == this.type) {
+    //           console.log("true");
+    //           return true;
+    //         }
+    //     });
+    // }
+    types_pokemon(types){
+      console.log(types);
+      console.log(this.type);
+      types.forEach(function(type_loop){
+          console.log(type_loop);
+          if (type_loop.type.name == this.type) {
+            console.log("true");
+            return true;
+          }
+      })  
     }
-  } 
+  }, 
+  // filters:{
+  //   types_pokemon
+  // }
 }
 </script>
 
