@@ -75,9 +75,9 @@
     </div>
     <br>
     <div id=Tailles>
-      <span> Taille min. </span>
+      <span> Taille min. (cm) </span>
       <input type="number" id="taille_min" v-model="taille_min" v-on:input="envoi_filtre">
-      <span> Taille max. </span>
+      <span> Taille max. (cm) </span>
       <input type="number" id="taille_max" v-model="taille_max" v-on:input="envoi_filtre">
     </div>
     <br>
@@ -110,13 +110,7 @@ export default {
   },
   methods:{
     envoi_filtre(){
-      console.log("filtre");
-      console.log(this.recherche);
-      console.log(this.region);
-      console.log(this.type);
-      console.log(this.taille_min);
-      console.log(this.taille_max);
-      this.$emit("my-event", this.recherche, this.region, this.type, parseInt(this.taille_min), parseInt(this.taille_max));
+      this.$emit("my-event", this.recherche, this.region, this.type, parseInt(this.taille_min)/10, parseInt(this.taille_max)/10);
     },
     clear_filters(){
       this.recherche='';
