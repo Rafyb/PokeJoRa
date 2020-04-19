@@ -48,3 +48,4 @@ npm run serve
 /Equipe
 ![image](https://raw.githubusercontent.com/Rafyb/Pokejora/master/docs/screens/Equipe.png "Page Equipe")
 
+
