@@ -35,8 +35,8 @@ export default {
       recherche:'',
       region:'',
       type:'',
-      taille_min:'', 
-      taille_max:'',
+      taille_min:0, 
+      taille_max:0,
     };
   },
   computed: {

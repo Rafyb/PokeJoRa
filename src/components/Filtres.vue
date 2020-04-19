@@ -81,14 +81,6 @@
       <input type="number" id="taille_max" v-model="taille_max" v-on:input="envoi_filtre">
     </div>
     <br>
-    <!-- <div id="Evolutions">
-      <input type="radio" id="premiere" value="Premiere" v-model="evolution">
-      <label for="premiere">1ère évolution</label>
-      <input type="radio" id="seconde" value="Seconde" v-model="evolution">
-      <label for="seconde">2nd évolution</label>
-      <input type="radio" id="troisieme" value="Troisieme" v-model="evolution">
-      <label for="troisieme">3ème évolution</label>
-    </div> -->
     <div id=buttons>
       <button id="clear_filters" v-on:click="clear_filters">Enlever les filtres</button>
     </div>
@@ -103,19 +95,12 @@ export default {
       recherche:'',
       region:'',
       type:'',
-      taille_min:'',
-      taille_max:'',
-      // evolution:''
+      taille_min:'0',
+      taille_max:'0',
     }
   },
   methods:{
     envoi_filtre(){
-      console.log("filtre");
-      console.log(this.recherche);
-      console.log(this.region);
-      console.log(this.type);
-      console.log(this.taille_min);
-      console.log(this.taille_max);
       this.$emit("my-event", this.recherche, this.region, this.type, parseInt(this.taille_min), parseInt(this.taille_max));
     },
     clear_filters(){
