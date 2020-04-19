@@ -1,18 +1,11 @@
 <template>
   <div id="Filtres">
     <h2>Filtres de recherche</h2>
-    <br>
-    <div id="alert-box">
-      <strong>EN CONSTRUCTION</strong>
-      <slot></slot>
-    </div>
-    <br>
-    <div id="Recherche">
+    <div id="Recherche" class="block">
       <input type="search" id="searchbar" v-model="recherche" v-on:input="envoi_filtre">
       <img src="../assets/logo_search.png" alt="search" height="3%" width="3%">
     </div>
-    <br>
-    <div id="Regions">
+    <div id="Regions" class="block">
       <span>Région : </span>
       <select v-model="region" v-on:change="envoi_filtre">
       <option value='generation-i'>Kanto</option>
@@ -24,8 +17,7 @@
       <option value='generation-vii'>Alola</option>
       </select>
     </div>
-    <br>
-    <div id="Types">
+     <div id="Types" class="block">
       <input type="radio" id="acier" value="steel" v-model="type" v-on:change="envoi_filtre">
       <label for="acier"><img src="../assets/acier.png" alt="Acier" height="20%" width="20%"></label>
       <input type="radio" id="combat" value="fighting" v-model="type" v-on:change="envoi_filtre">
@@ -73,14 +65,12 @@
       <input type="radio" id="insecte" value="bug" v-model="type" v-on:change="envoi_filtre">
       <label for="insecte"><img src="../assets/insecte.png" alt="Insecte" height="20%" width="20%"></label>
     </div>
-    <br>
-    <div id=Tailles>
+    <div id=Tailles class="block">
       <span> Taille min. (cm) </span>
       <input type="number" id="taille_min" v-model="taille_min" v-on:input="envoi_filtre">
       <span> Taille max. (cm) </span>
       <input type="number" id="taille_max" v-model="taille_max" v-on:input="envoi_filtre">
     </div>
-    <br>
     <div id=buttons>
       <button id="clear_filters" v-on:click="clear_filters">Enlever les filtres</button>
     </div>
@@ -118,31 +108,23 @@ export default {
 </script>
 
 <style scoped>
-#alert-box{
-  border: black solid 1px;
-  border-radius: 10px;
-  background-color: red;
-  width:80%;
-  text-align: center;
-  margin-left:10%;
-}
 #searchbar{
-  border-radius: 30%;
+  border-radius: 10px;
   margin-right: 1%;
 }
 #Recherche{
-  background-color: grey;
+  /* background-color: grey; */
   padding-top: 2%;
   padding-bottom: 2%;
 }
-#Types{
+/* #Types{
   border: green solid 0.5px;
   border-radius: 5px;
-  background-color: yellow;
+  background-color: blue;
   width:80%;
   text-align: center;
   margin-left:10%;
-}
+} */
 #Tailles span{
   font-size:50%;
 }
