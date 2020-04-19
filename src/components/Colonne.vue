@@ -6,8 +6,8 @@
         <img :src="'https://pokeres.bastionbot.org/images/pokemon/'+pokemon.data.id+'.png'" alt="Avatar" id="Avatar">
         <div class="types" v-html="typesToHtml(pokemon.details.types)"></div>
         <div class="block">
-          <p>Taille : </p>
-          <p>Poids : </p>
+          <p>Taille : {{pokemon.details.height/10}} m</p>
+          <p>Poids : {{pokemon.details.weight/10}} kg</p>
         </div>
         <div class="block">
             <h3>Description</h3>
