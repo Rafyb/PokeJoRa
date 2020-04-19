@@ -76,7 +76,7 @@ background-color: rgba(116, 116, 116, 0.8);
 /* Position the "next button" to the right */
 .next {
   right: 15%;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0 3px 3px 0;
 }
 
 .prev{
