@@ -113,18 +113,9 @@ export default {
   margin-right: 1%;
 }
 #Recherche{
-  /* background-color: grey; */
   padding-top: 2%;
   padding-bottom: 2%;
 }
-/* #Types{
-  border: green solid 0.5px;
-  border-radius: 5px;
-  background-color: blue;
-  width:80%;
-  text-align: center;
-  margin-left:10%;
-} */
 #Tailles span{
   font-size:50%;
 }
